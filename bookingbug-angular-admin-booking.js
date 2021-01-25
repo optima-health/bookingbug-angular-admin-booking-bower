@@ -1,14 +1,5 @@
 (function() {
   'use strict';
-  angular.module('BBAdminBooking').config(["$logProvider", function($logProvider) {
-    'ngInject';
-    $logProvider.debugEnabled(true);
-  }]);
-
-}).call(this);
-
-(function() {
-  'use strict';
   angular.module('BBAdminBooking', ['BB', 'BBAdmin.Services', 'BBAdminServices', 'trNgGrid']);
 
   angular.module('BBAdminBooking.Directives', []);
@@ -16,6 +7,15 @@
   angular.module('BBAdminBooking.Services', ['ngResource', 'ngSanitize']);
 
   angular.module('BBAdminBooking.Controllers', ['ngLocalData', 'ngSanitize']);
+
+}).call(this);
+
+(function() {
+  'use strict';
+  angular.module('BBAdminBooking').config(["$logProvider", function($logProvider) {
+    'ngInject';
+    $logProvider.debugEnabled(true);
+  }]);
 
 }).call(this);
 
